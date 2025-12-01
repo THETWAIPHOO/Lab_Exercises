@@ -4,6 +4,7 @@ using Lab_Exercises.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lab_Exercises.Migrations
 {
     [DbContext(typeof(Lab_ExercisesContext))]
-    partial class Lab_ExercisesContextModelSnapshot : ModelSnapshot
+    [Migration("20251201070815_SeedUserRole9")]
+    partial class SeedUserRole9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,7 +100,7 @@ namespace Lab_Exercises.Migrations
                         {
                             Id = "3781efa7-66dc-47f0-860f-e506d04102e4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c8554266-b401-4519-9aeb-0622ad0ee11b",
+                            ConcurrencyStamp = "40bc8d7d-6c06-4918-bc51-dd28d8eaaaa1",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             FirstName = "Admin",
@@ -107,7 +110,7 @@ namespace Lab_Exercises.Migrations
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
                             PasswordHash = "AQAAAAIAAYagAAAAEI1fSLcTV9JUgYO2lJFFRKvdlnX9I5cA17WW3Thr4152Uo9/S64nFDAT58ud6PRbQA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "SEJFVFYNRSJZB5TGSDNE4GHFT7GS6TRE",
+                            SecurityStamp = "8b9d6467-51c0-44c0-af0a-135a8b90f7d2",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         });
@@ -419,14 +422,14 @@ namespace Lab_Exercises.Migrations
                         new
                         {
                             Id = "ad2bcf0c-20db-474f-8407-5a6b159518ba",
-                            ConcurrencyStamp = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
+                            ConcurrencyStamp = "51337bd8-e892-4df5-834c-db9a25d8bd59",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "bd2bcf0c-20db-474f-8407-5a6b159518bb",
-                            ConcurrencyStamp = "fab4fac1-c546-41de-aebc-a14da6895711",
+                            ConcurrencyStamp = "37c18939-7592-438e-92a1-b373e6b33ae2",
                             Name = "User",
                             NormalizedName = "USER"
                         });

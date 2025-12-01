@@ -21,6 +21,9 @@ namespace Lab_Exercises.Data
             modelBuilder.ApplyConfiguration(new ColourSeed());
             modelBuilder.ApplyConfiguration(new CarModelSeed());
             modelBuilder.ApplyConfiguration(new MakeSeed());
+            modelBuilder.ApplyConfiguration(new RoleSeed());
+            modelBuilder.ApplyConfiguration(new UserRoleSeed());
+            modelBuilder.ApplyConfiguration(new UserSeed());
 
         }
     }

@@ -4,6 +4,7 @@ using Lab_Exercises.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lab_Exercises.Migrations
 {
     [DbContext(typeof(Lab_ExercisesContext))]
-    partial class Lab_ExercisesContextModelSnapshot : ModelSnapshot
+    [Migration("20251201071000_SeedUserRole10")]
+    partial class SeedUserRole10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -419,14 +422,14 @@ namespace Lab_Exercises.Migrations
                         new
                         {
                             Id = "ad2bcf0c-20db-474f-8407-5a6b159518ba",
-                            ConcurrencyStamp = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
+                            ConcurrencyStamp = "1f217314-5d41-4e24-91ec-d1fb30b559ac",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "bd2bcf0c-20db-474f-8407-5a6b159518bb",
-                            ConcurrencyStamp = "fab4fac1-c546-41de-aebc-a14da6895711",
+                            ConcurrencyStamp = "9c4b3171-7076-45b4-8187-39fb99bd703c",
                             Name = "User",
                             NormalizedName = "USER"
                         });

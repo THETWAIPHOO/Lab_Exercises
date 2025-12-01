@@ -5,5 +5,7 @@ namespace Lab_Exercises.Data
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class Lab_ExercisesUser : IdentityUser
     {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
     }
 }
