@@ -1,0 +1,54 @@
+﻿@page "/carmodels/details"
+@using Microsoft.EntityFrameworkCore
+@using Lab_Exercises.Domain
+@inject IDbContextFactory<Lab_Exercises.Data.Lab_ExercisesContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h2>CarModel</h2>
+    <hr />
+    @if (carmodel is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@carmodel.Name</dd>
+            <dt class="col-sm-2">CreatedDate</dt>
+            <dd class="col-sm-10">@carmodel.CreatedDate</dd>
+            <dt class="col-sm-2">UpdatedDate</dt>
+            <dd class="col-sm-10">@carmodel.UpdatedDate</dd>
+            <dt class="col-sm-2">CreatedBy</dt>
+            <dd class="col-sm-10">@carmodel.CreatedBy</dd>
+            <dt class="col-sm-2">UpdatedBy</dt>
+            <dd class="col-sm-10">@carmodel.UpdatedBy</dd>
+        </dl>
+        <div>
+            <a href="@($"/carmodels/edit?id={carmodel.Id}")">Edit</a> |
+            <a href="@($"/carmodels")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    private CarModel? carmodel;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        carmodel = await context.CarModel.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (carmodel is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}
