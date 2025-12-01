@@ -20,7 +20,7 @@ namespace Lab_Exercises.Configurations.Entities
                     UserName = "admin@localhost.com",
                     NormalizedUserName = "ADMIN@LOCALHOST.COM",
                     PasswordHash = "AQAAAAIAAYagAAAAEI1fSLcTV9JUgYO2lJFFRKvdlnX9I5cA17WW3Thr4152Uo9/S64nFDAT58ud6PRbQA==",
-                    EmailConfirmed = true, // Set to true, otherwise you won't be able to login
+                    EmailConfirmed = true,
                     SecurityStamp = "SEJFVFYNRSJZB5TGSDNE4GHFT7GS6TRE",
                     ConcurrencyStamp = "c8554266-b401-4519-9aeb-0622ad0ee11b"
 
